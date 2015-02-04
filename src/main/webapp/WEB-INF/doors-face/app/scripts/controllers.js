@@ -3,11 +3,12 @@
 var controllers = angular.module('controllers', []);
 
 controllers.controller('MainCtrl', function ($scope) {
+	$scope.pageTitle = 'batman main';
   });
 
 controllers.controller('ExampleCtrl', ['$scope', 'Example', function ($scope, Example) {
-    $scope.examples = Example.query();
-    console.log($scope.examples);
+	$scope.pageTitle = 'batman example';
+	$scope.examples = Example.query();
 }]);
 
 
@@ -18,8 +19,6 @@ controllers.controller('InstrumentCtrl', ['$scope', 'Instrument', function ($sco
 controllers.controller('RecallCtrl', ['$scope', 'Recall', function ($scope, Recall) {
     $scope.recalls = Recall.query();
     
-    console.log($scope.recalls);
-
     $scope.addRecall = function() {
       var newRecall = {};
 	  newRecall.text = $scope.newRecallText;
@@ -28,7 +27,6 @@ controllers.controller('RecallCtrl', ['$scope', 'Recall', function ($scope, Reca
     	  $scope.recalls.push(recall);
     	  $scope.error = null;
       }, function(err) {
-    	  console.log(err);
     	  $scope.error = err.data.message;
       });
       
