@@ -1,14 +1,63 @@
 <style>
-.instrument {
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
+.carousel-inner .item img{
+    margin: auto;
+}
+.carousel-inner .item {
+    height: 1000px;
+}
+#carousel-example-generic {
+    height: 100px;
+}
+#arrows {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.but {
+  padding: 10px 23px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  margin-top: 10px;
+  font-weight: bolder;
+  font-size: 40px;
+  text-decoration: none !important;
+  cursor: pointer;
+  
+  border-radius: 50%;
+  background-color: #428bca;
+}
+.but:hover {
+  color: white;
+}
+.description {
+  text-align: center;
+  font-size: 20px;
 }
 </style>
 
-<div>
-	<div class="instrument" ng-repeat="instrument in instruments">
-		<img ng-src="{{instrument.url}}" alt="Инструменты, используемые для установки" />
-		<p>{{instrument.description}}</p>
+<div id="arrows">
+	<a class="but" id="goleft">&lt;</a>
+	<a class="but" id="goright">&gt;</a>
+</div>
+
+<div id="carousel-example-generic" class="carousel slide"
+	data-ride="carousel">
+	<div class="carousel-inner">
+		<div ng-repeat="instrument in instruments" data-slide-to="{{$index}}"
+			class="item" ng-class="{'active': $index == 0}">
+			<img ng-src="{{instrument.url}}" alt="Инструменты, используемые для установки">
+			<div class="description">{{instrument.description}}</div>
+		</div>
 	</div>
 </div>
+
+<script>
+	$('#goleft').click(function() {
+		$('.carousel').carousel('prev');
+	});
+
+	$('#goright').click(function() {
+		$('.carousel').carousel('next');
+	});
+</script>

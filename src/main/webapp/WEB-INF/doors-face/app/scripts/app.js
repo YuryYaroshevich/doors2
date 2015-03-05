@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name vovadoorsApp
- * @description
- * # vovadoorsApp
- *
- * Main module of the application.
- */
 angular
   .module('vovadoorsApp', [
     'ngResource',
@@ -23,20 +15,30 @@ angular
       })
       .when('/examples', {
         templateUrl: 'res/doors-face/app/views/examples.html',
-        controller: 'ExampleCtrl'/*,
+        controller: 'ExampleCtrl',
         resolve: {
-              examples: function(Examples) {
-                  return Examples();
-              }
-        }*/
+        	examples: function(Example) {
+        		return Example.query();
+        	}
+        }
       })
       .when('/instruments', {
         templateUrl: 'res/doors-face/app/views/instruments.html',
-        controller: 'InstrumentCtrl'
+        controller: 'InstrumentCtrl',
+        resolve: {
+        	instruments: function(Instrument) {
+        		return Instrument.query();
+        	}
+        }
       })
       .when('/recalls', {
         templateUrl: 'res/doors-face/app/views/recalls.html',
-        controller: 'RecallCtrl'
+        controller: 'RecallCtrl',
+        resolve: {
+        	recalls: function(Recall) {
+            	return Recall.query();
+            }
+        }
       })
       .otherwise({
     	  redirectTo: '/'

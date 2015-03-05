@@ -1,18 +1,26 @@
 [
 		{
-			"url":"res/doors-face/app/instruments/instr1.jpg",
-			"description": "dfgdfgd dgg dhg aldkjhgh kdfjghdkjg dlgk dfnlgjadfa a fjgghkjgh kjhdf jaghad sdfdskgh dfsfg kjh"
+			"url":"res/doors-face/app/instruments/lh1040.jpg",
+			"description": "Инструмент Table top miter lh1040 используется для распила заготовок."
 		},
 		{
-			"url":"res/doors-face/app/instruments/instr2.jpg",
-			"description": "dfgdfgd dgg dhg aldkjhgh kdfakdfjbg dfkjga jgha fjgghkjgh kjhdf jaghad sdfdskgh dfsfg kjh"
+			"url":"res/doors-face/app/instruments/rp2300fc.jpg",
+			"description": "Фрейзер Router rp2300fc используется для врезки замков."
 		},
 		{
-			"url":"res/doors-face/app/instruments/instr3.jpg",
-			"description": "dfgdfgd dgg dhg alddfkg dfkjg dfgadga kjhgh kdfjgha fjgghkjgh kjhdf jaghad sdfdskgh dfsfg kjh"
+			"url":"res/doors-face/app/instruments/bosh-gkf600.jpg",
+			"description": "Фрейзер Bosch gkf600 используется для врезки петель."
 		},
 		{
-			"url":"res/doors-face/app/instruments/instr4.jpg",
-			"description": "dfgdfgd dgg dhg aadkfgj dbfg dadflhgdf jgh ldkjhgh kdfjgha fjgghkjgh kjhdf jaghad sdfdskgh dfsfg kjh"
+			"url":"res/doors-face/app/instruments/bosch_2_26.jpg",
+			"description": "Для различных видов сверления используется перфоратор Bosch 2-26."
+		},
+		{
+			"url":"res/doors-face/app/instruments/AEG_BSB_18G2.jpg",
+			"description": "Для закручивания шурупов, саморезов, винтов и дюбелей используется шуроповёрт AEG BSB 18g2."
+		},
+		{
+			"url":"res/doors-face/app/instruments/bosch_gll_2-50.jpg",
+			"description": "С помощи лазерного уровня Bosch gll 2-50 устанавливается коробка. Она крепится специальными крепёжными нагелями, а после этого запенивается."
 		}
 ]

@@ -3,21 +3,19 @@
 var controllers = angular.module('controllers', []);
 
 controllers.controller('MainCtrl', function ($scope) {
-	$scope.pageTitle = 'batman main';
   });
 
-controllers.controller('ExampleCtrl', ['$scope', 'Example', function ($scope, Example) {
-	$scope.pageTitle = 'batman example';
-	$scope.examples = Example.query();
+controllers.controller('ExampleCtrl', ['$scope', 'examples', function ($scope, examples) {
+	$scope.examples = examples;
 }]);
 
 
-controllers.controller('InstrumentCtrl', ['$scope', 'Instrument', function ($scope, Instrument) {
-    $scope.instruments = Instrument.query();
+controllers.controller('InstrumentCtrl', ['$scope', 'instruments', function ($scope, instruments) {
+    $scope.instruments = instruments;
 }]);
 
-controllers.controller('RecallCtrl', ['$scope', 'Recall', function ($scope, Recall) {
-    $scope.recalls = Recall.query();
+controllers.controller('RecallCtrl', ['$scope', 'recalls', 'Recall', function ($scope, recalls, Recall) {
+    $scope.recalls = recalls;
     
     $scope.addRecall = function() {
       var newRecall = {};
